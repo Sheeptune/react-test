@@ -16,6 +16,20 @@ code {
 
 /* SEARCH */
 
+.container-fluid{
+  background-color: rgb(240, 238, 241);
+  margin-bottom: 1.5em;
+  height: 6em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.search-zone.container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 
 /* CARDS */

@@ -3,6 +3,18 @@ import ReactDOM from 'react-dom';
 import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.css';
 import './index.css';
+import Workers from './w3d-people.json';
+
+
+function SearchBar(props) {
+    return (
+        <section class="container-fluid">
+            <div class="search-zone container">
+                <input class="col-12" type="text" placeholder="search 🔍" />
+            </div>
+        </section>
+    );
+}
 
 function Worker (props) {
     return(
@@ -18,7 +30,7 @@ function Worker (props) {
                         </div>
                         <div class="col-md-9 col-xs-12 worker-info">
                             <p class="worker-name">{props.name}</p>
-                            <p class="worker-role">{props.role}</p>
+                            <p class="worker-role">{props.job}</p>
                         </div>
                         <div class="col-md-1 col-xs-12">
                             <input type="checkbox"/>
@@ -36,27 +48,22 @@ class Company extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            workers: [
-                { name: "Nicolas Detrez", role :"Content creator" },
-                { name :"Alexis Camus", role : "Customer Success" },
-                { name :"Vincent Cotro", role : "Fondateur et développeur" },
-                { name :"Thomas Grivet", role : "Développeur React" },
-                { name :"Damien Cavailles", role : "Fondateur" },
-                { name :"Clément Devos", role : "Développeur" },
-            ],
+            workers: Workers
         };
     }
 
     render() {
         const workers = this.state.workers;
-        return (<div>
-            <Worker name={workers[0].name} role={workers[0].role} />
-            <Worker name={workers[1].name}  role={workers[1].role}/>
-            <Worker name={workers[2].name} role={workers[2].role}/>
-            <Worker name={workers[3].name} role={workers[3].role} />
-            <Worker name={workers[4].name}  role={workers[4].role}/>
-            <Worker name={workers[5].name} role={workers[5].role}/>
-        </div>);
+        return (
+
+            <div>
+            <SearchBar />
+                {
+                    workers.map(function(worker,index) {
+                        return <Worker surname={worker.surname} name={worker.name} job={worker.job} key={index} />
+                    })
+                }
+            </div>);
     }
 }
 

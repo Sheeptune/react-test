@@ -1,0 +1,37 @@
+[
+    {
+        "name": "Clément",
+        "surname": "Devos",
+        "job": "Developer"
+    },
+    {
+		"name": "Vincent",
+		"surname": "Cotro",
+		"job": "Co-founder"
+    },
+    {
+		"name": "Damien",
+		"surname": "Cavaillès",
+		"job": "Co-founder"
+    },
+    {
+		"name": "Alexis",
+		"surname": "Camus",
+		"job": "Customer Success manager"
+    },
+    {
+		"name": "Martin",
+		"surname": "Lutton",
+		"job": "Developers care manager"
+    },
+    {
+		"name": "Thomas",
+		"surname": "Griver",
+		"job": "Developer"
+    },
+    {
+		"name": "Nicolas",
+		"surname": "Detrez",
+		"job": "Communication manager"
+    }
+]
