@@ -32,18 +32,31 @@ function Worker (props) {
     )
 }
 
-class Company extends React.Component{
-    render(){
-        return(
-            <div>
-                <Worker name="Nicolas Detrez" role="Content creator"/>
-                <Worker name="Alexis Camus" role="Customer Success"/>
-                <Worker name="Vincent Cotro" role="Fondateur et développeur"/>
-                <Worker name="Thomas Grivet" role="Développeur React"/>
-                <Worker name="Damien Cavailles" role="Fondateur"/>
-                <Worker name="Clément Devos" role="Développeur"/>
-            </div>
-        );
+class Company extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            workers: [
+                { name: "Nicolas Detrez", role :"Content creator" },
+                { name :"Alexis Camus", role : "Customer Success" },
+                { name :"Vincent Cotro", role : "Fondateur et développeur" },
+                { name :"Thomas Grivet", role : "Développeur React" },
+                { name :"Damien Cavailles", role : "Fondateur" },
+                { name :"Clément Devos", role : "Développeur" },
+            ],
+        };
+    }
+
+    render() {
+        const workers = this.state.workers;
+        return (<div>
+            <Worker name={workers[0].name} role={workers[0].role} />
+            <Worker name={workers[1].name}  role={workers[1].role}/>
+            <Worker name={workers[2].name} role={workers[2].role}/>
+            <Worker name={workers[3].name} role={workers[3].role} />
+            <Worker name={workers[4].name}  role={workers[4].role}/>
+            <Worker name={workers[5].name} role={workers[5].role}/>
+        </div>);
     }
 }
 
