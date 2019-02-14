@@ -14,8 +14,23 @@ code {
     monospace;
 }
 
+/* SEARCH */
+
+
+
+/* CARDS */
+
+.card {
+  margin-bottom: 0.5em;
+
+}
+
 li {
   list-style: none;
+}
+
+p {
+  margin-top: 0.2em !important;
 }
 
 .worker-info{
@@ -31,12 +46,4 @@ li {
 .worker-role{
   color: rgba(0, 0, 0, 0.589);
   font-size: 0.8em;
-}
-
-p {
-  margin-top: 0.2em !important;
-}
-
-.card {
-  margin-bottom: 0.5em;
 }
