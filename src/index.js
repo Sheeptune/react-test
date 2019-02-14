@@ -2,16 +2,22 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 
+function Worker (props) {
+    return(
+        <li>{props.value}</li>
+    )
+}
+
 class Company extends React.Component{
     render(){
         return(
             <ul>
-                <li>Nicolas Detrez</li>
-                <li>Alexis Camus</li>
-                <li>Vincent Cotro</li>
-                <li>Thomas Grivet</li>
-                <li>Damien Cavailles</li>
-                <li>Clément Devos</li>
+                <Worker value="Nicolas Detrez"/>
+                <Worker value="Alexis Camus"/>
+                <Worker value="Vincent Cotro"/>
+                <Worker value="Thomas Grivet"/>
+                <Worker value="Damien Cavailles"/>
+                <Worker value="Clément Devos"/>
             </ul>
         );
     }
